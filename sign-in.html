@@ -2,18 +2,23 @@
  <html>         
 
  <head>
-  <title>Welcome Back</title>
-    <link rel="stylesheet" href="app.css"/>
-    <link rel="stylesheet" href="app.css"/>
+    <title>Welcome Back</title>
+
+
+  <link rel="stylesheet" href="app.css"/>
+  <link rel="stylesheet" href="app.css"/>
+
 </head>
 
 <body class="wrapper">
 
 <div class="bar-header">
       <div class="logo-bar"></div>
-    </div>  
+    </div> 
+
   <div id="container-boundingbox" class="wrapper">
       <div id="container" class="wrapper">
+        <form action="home.html" >
         <div class="main">
           <div class="MinimalFormFrame"><div class="heading">
       <div class="branding"></div>
@@ -28,7 +33,7 @@
         <li class="Row">
             <div class="OpenIdLoginModule"><div id="googleOauthButton" class="oauth-google">
     <div class="oauth-google-inner">
-      <img src="/redesign/OpenID/img/GGL_logo_googleg_18.png">
+      <img src="google-icon.png">
       <div class="oauth-google-text">
         Sign in with Google</div>
     </div>
@@ -56,9 +61,12 @@
           <li class="Row CanBePulledDown" id="responseMessageRow">
             <div id="responseMessage" class="PullableText"></div>
           </li>
+          
           <li class="Row CanBePulledDown PulledIntoView" id="submitRow">
               <input type="hidden" name="evaluateUsername" id="eventToTrigger" />
-              <input name="loginButton" id="loginButton" type="submit" class="Btn Btn_emph Btn_super" value="Continue" /></li>
+              <a href="home.html"><input name="loginButton" id="loginButton" type="submit" class="Btn Btn_emph Btn_super" value="Continue" /></a>
+          </li>
+
           <li class="Row horizontalSpace">
           </li>
           <li class="checkbox-container SwitchInput Row CanBePulledDown PulledIntoView" id="rememberMeRow">
@@ -82,15 +90,18 @@
       <div class="t-pico">
           Don't have an account?</div>
       <div class="switch">
-        <form method="post" action="/Registration.action" id="switch-form"><a id="switch-link">Create account</a>
-        <input type="hidden" name="analyticsLoginOrigin" value="login_action" /><input type="hidden" name="clipperFlow" value="false" /><input type="hidden" name="showSwitchService" value="true" /><input type="hidden" name="usernameImmutable" value="false" /><div style="display: none;"><input type="hidden" name="_sourcePage" value="8NN3ls5PrRbiMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP" /><input type="hidden" name="__fp" value="vy5hoGBoXno=" /></div></form></div>
+        <form method="post" action="/Registration.action" id="switch-form"><a id="switch-link" href="sign-up.html">Create account</a>
+        <input type="hidden" name="analyticsLoginOrigin" value="login_action" /><input type="hidden" name="clipperFlow" value="false" /><input type="hidden" name="showSwitchService" value="true" /><input type="hidden" name="usernameImmutable" value="false" /><div style="display: none;"><input type="hidden" name="_sourcePage" value="8NN3ls5PrRbiMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP" /><input type="hidden" name="__fp" value="vy5hoGBoXno=" /></div>
+      </div>
     </div>
   </div>
 </div>
-
+        
         <div class="footer wrapper">
  
-        </div>
 </div>
+</form>
+</div>
+
     </div>
   </body></html>
