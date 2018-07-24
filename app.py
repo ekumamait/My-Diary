@@ -4,13 +4,13 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 Entries = [
-{"entry_id": 1, "date": "01/11/2018", 'title': "first safari",'description': "advkbfsdkjbv"},
-{"entry_id": 2, "date": "01/11/2018", 'title': "first safari",'description': "advkbfsdkjbv"},
-{"entry_id": 3, "date": "01/11/2018", 'title': "first safari",'description': "advkbfsdkjbv"}]
+{"entry_id": 1, "date": "01/11/2018", "title": "first safari","description": "advkbfsdkjbv"},
+{"entry_id": 2, "date": "01/11/2018", "title": "first safari","description": "advkbfsdkjbv"},
+{"entry_id": 3, "date": "01/11/2018", "title": "first safari","description": "advkbfsdkjbv"}]
 
 @app.route('/')
 def index():
-	return "Hello World"
+	return "Welcome to My-Diary"
 
 @app.route('/api/v1/entries', methods = ['GET'] )
 def all_entries():

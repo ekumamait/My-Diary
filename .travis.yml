@@ -1,18 +1,13 @@
 language: python
-#version
 python:
   - "3.5"
+  - "3.5-dev"  # 3.5 development branch
   - "3.6"
-  - "3.7"
- cache: pip 
-
+  - "3.6-dev"  # 3.6 development branch
+  - "3.7-dev"  # 3.7 development branch
+# command to install dependencies
 install:
-  - pip install -r -requirements.txt
-  - pip install coveralls
-  - pip install coverage
-  - pip install nose
+  - pip install -r requirements.txt
+# command to run tests
 script:
-  - nosetests --with-coverage app_tests.py 
-after_success:
-  -coveralls 
-
+  - pytest # or py.test for Python versions 3
