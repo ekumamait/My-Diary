@@ -1,11 +1,9 @@
-<style type="text/css">
-
 body{
     font-family: gotham, helvetica, arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857;
     text-align: center;
-    
+    background: url("unsplash.jpg");  
 }
 h1,h2,h3,h4,h5,h6{
     font-weight: 200;
@@ -17,14 +15,7 @@ h3{
 li {
     line-height: 20px;
 }
-.pageWrapper{
-    min-height: 100%;
-}
-.coloredBg{
-    background-image: linear-gradient(top bottom,#654a86,#2dbe60);
-    background-color: #2dbe60;
-    height: 100%;
-}
+
 .container{
     position: relative;
     text-align: center;
@@ -56,6 +47,26 @@ li {
     width: 100%;
     z-index: 1;
 }
+/*****boy*****/
+
+.events_page {
+    background: url("unsplash.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+.events{
+    grid-row:3;
+}
+
+.entry {
+    
+    background: url("unsplash.jpg") no-repeat;
+    background-size: cover;
+    padding: 20px 20px 20px;
+    width: 30vw;
+    height: 25vh;
+}
+
 .navigation{
     width: 100%;
     background: #FFFFFF;
@@ -176,7 +187,7 @@ li {
     width: 150px;
     height: 150px;
     text-align: center;
-    margin-left: 30%;
+    margin-left: 15%;
     margin-right: 15%;
     margin-top: 3%;
 }
@@ -195,57 +206,3 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style the header */
-header {
-    background-color: #666;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-    float: left;
-    width: 30%;
-    height: 300px; /* only for demonstration, should be removed */
-    background: #ccc;
-    padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-article {
-    float: left;
-    padding: 20px;
-    width: 70%;
-    background-color: #f1f1f1;
-    height: 300px; /* only for demonstration, should be removed */
-}
-
-/* Clear floats after the columns */
-section:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Style the footer */
-footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-    nav, article {
-        width: 100%;
-        height: auto;
-    }
-}
