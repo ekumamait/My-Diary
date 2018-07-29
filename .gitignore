@@ -1,5 +1,5 @@
-!.pytest_cache/
-!.vscode/
-!__pycache__/
-!venv/
-!.gitignore
+.pytest_cache/
+.vscode/
+__pycache__/
+venv/
+.gitignore
