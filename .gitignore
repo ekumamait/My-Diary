@@ -2,4 +2,5 @@
 .vscode/
 __pycache__/
 venv/
-.gitignore
+ Tests/__pycache__/
+api/__pycache__/
