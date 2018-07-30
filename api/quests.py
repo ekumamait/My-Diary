@@ -12,3 +12,9 @@ user_details = [
 @app.route('/api/v1/users', methods=['GET'])
 def return_all_users():
 return jsonify({'details': user_details})
+
+@app.route('/api/v1/user/<int:user_id>', methods = ['GET'] )
+def single_entry(user_id):
+
+	entry = [entry for entry in Entries if entry['entry_id']==entry_id]
+	return jsonify({'entry': entry[0]})
