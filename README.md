@@ -6,8 +6,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/ekumamait/My-Diary/badge.svg)](https://coveralls.io/github/ekumamait/My-Diary)
 
 
-# H2 PROJECT SETUP
----
+# PROJECT SETUP
+
 
 1. Clone the Repository
 `https://github.com/ekumamait/My-Diary`
