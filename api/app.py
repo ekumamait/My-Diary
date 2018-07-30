@@ -38,7 +38,8 @@ def delete_entry(entry_id):
 	for entry in Entries:
 		if entry['entry_id'] == entry_id:
 			Entries.remove(entry)	
-			return jsonify({'200': 'Entry removed'})	
+			return jsonify({'200': 'Entry removed'})
+	return jsonify({'404':'Resource not found'})	
 
 @app.route('/api/v1/entries/<int:entry_id>', methods = ['PUT'] )
 def edit_entry(entry_id):
@@ -47,7 +48,8 @@ def edit_entry(entry_id):
 	for entry in Entries:
 		if entry['entry_id'] == entry_id:
 			entry['content'] = new_entry['content']
-	return jsonify({'200' : 'Entry updated'})			
+			return jsonify({'200' : 'Entry updated'})
+	return jsonify({'404':'Resource not found'})			
 
 if __name__=='__main__':
 	app.run(debug=True)	
