@@ -11,10 +11,8 @@ def index():
 
 @app.route('/api/v2/sign_up', methods = ['POST'])
 def sign_up():
-    my_user = request.json.get()
-
-    # my_user:Users(register[user_name], register[user_password])
-    my_user.insert_new_user()
+    data = request.get_json()
+    
     return jsonify({'account created'})
 
 @app.route('/api/v2/auth/login', methods = ['POST'])
@@ -35,36 +33,35 @@ def login():
     if user_name != 'test'or password !='test':
         return jsonify({'msg': 'incorrect username or password'})
 
-@app.route('/api/v1/entries', methods = ['GET'] )
-def all_entries():
-	return jsonify(Entries)
+# @app.route('/api/v1/entries', methods = ['GET'] )
+# def all_entries():
+# 	return jsonify(Entries)
 
-@app.route('/api/v1/entries/<int:entry_id>', methods = ['GET'] )
-def single_entry(entry_id):
+# @app.route('/api/v1/entries/<int:entry_id>', methods = ['GET'] )
+# def single_entry(entry_id):
+#     entry = [entry for entry in Entries if entry['entry_id']==entry_id]
+#     return jsonify({'entry': entry[0]})
 
-	    entry = [entry for entry in Entries if entry['entry_id']==entry_id]
-        return jsonify({'entry': entry[0]})
+# @app.route('/api/v1/entries', methods = ['POST'] )
+# def add_entry():
+# 	new_entry = request.get_json() 
+# 	new_entry['date'] = now
+# 	Entries.append(new_entry)
+# 	id = 1
+# 	for entry in Entries:
+# 		entry['entry_id'] = id
+# 		id += 1
+#     return jsonify({'entries': Entries})
 
-@app.route('/api/v1/entries', methods = ['POST'] )
-def add_entry():
-	new_entry = request.get_json() 
-	new_entry['date'] = now
-	Entries.append(new_entry)
-	id = 1
-	for entry in Entries:
-		entry['entry_id'] = id
-		id += 1
-    return jsonify({'entries': Entries})
-
-@app.route('/api/v1/entries/<int:entry_id>', methods = ['PUT'] )
-def edit_entry(entry_id):
-	new_entry = request.get_json()
-	entry = [entry for entry in Entries if entry['entry_id']==entry_id]
-	for entry in Entries:
-		if entry['entry_id'] == entry_id:
-			entry['content'] = new_entry['content']
-			return jsonify({'200' : 'Entry updated'})
-    return jsonify({'404':'Resource not found'}
+# @app.route('/api/v1/entries/<int:entry_id>', methods = ['PUT'] )
+# def edit_entry(entry_id):
+# 	new_entry = request.get_json()
+# 	entry = [entry for entry in Entries if entry['entry_id']==entry_id]
+# 	for entry in Entries:
+# 		if entry['entry_id'] == entry_id:
+# 			entry['content'] = new_entry['content']
+# 			return jsonify({'200' : 'Entry updated'})
+#     return jsonify({'404':'Resource not found'}
 
 if __name__ == '__main__':
     app.run(debug=True)
