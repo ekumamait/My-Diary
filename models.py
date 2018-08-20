@@ -61,5 +61,4 @@ class Entries(Database):
         create = """SELECT * FROM Entries;"""
         self.cur.execute(create)
         self.conn.commit()
-        return True            
-
+        return True

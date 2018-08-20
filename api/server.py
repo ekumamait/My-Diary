@@ -1,7 +1,5 @@
 from flask import Flask, jsonify, request, make_response
-from models import Users
-
-app = Flask(__name__)
+from api.server import app
 
 # my_user = Users()
 
@@ -11,7 +9,7 @@ def index():
 
 @app.route('/api/v2/sign_up', methods = ['POST'])
 def sign_up():
-    data = request.get_json()
+    # data = request.get_json()
     
     return jsonify({'account created'})
 
@@ -44,7 +42,7 @@ def login():
 
 # @app.route('/api/v1/entries', methods = ['POST'] )
 # def add_entry():
-# 	new_entry = request.get_json() 
+# 	new_entry = request.get_json()
 # 	new_entry['date'] = now
 # 	Entries.append(new_entry)
 # 	id = 1
@@ -63,5 +61,5 @@ def login():
 # 			return jsonify({'200' : 'Entry updated'})
 #     return jsonify({'404':'Resource not found'}
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
