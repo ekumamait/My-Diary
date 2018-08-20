@@ -52,7 +52,7 @@ class Entries(Database):
         return True 
 
     def get_entry_by_id(self): 
-        create = """SELECT FROM User WHERE entry_id IN (VALUES(%s),"""
+        create = """SELECT FROM User WHERE entry_id IN (VALUES(%s);"""
         self.cur.execute(create)
         self.conn.commit()
         return True

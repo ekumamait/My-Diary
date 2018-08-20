@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request, make_response
-from api.server import app
+from routes.views import app
 
-# my_user = Users()
 
 @app.route('/')
 def index():
@@ -9,7 +8,6 @@ def index():
 
 @app.route('/api/v2/sign_up', methods = ['POST'])
 def sign_up():
-    # data = request.get_json()
     
     return jsonify({'account created'})
 
@@ -60,6 +58,3 @@ def login():
 # 			entry['content'] = new_entry['content']
 # 			return jsonify({'200' : 'Entry updated'})
 #     return jsonify({'404':'Resource not found'}
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
