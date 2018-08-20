@@ -39,8 +39,11 @@ The main focus of this build in its present is the User Entries's section of the
 3. install all dependencies
 `pip install -r requirements.txt`
 
-4. Run the application
-`python My-Diary`
+4. activate virtual environment
+`source venv\Scripts\activate`
+
+5. Run the application
+`python run.py`
 
 ###### AVAILABLE ROUTES;
 
