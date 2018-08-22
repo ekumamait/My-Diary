@@ -69,4 +69,9 @@ class Entries():
         self.cur.execute(create)
         return True   
 
+    def delete_entry(self, entry_id):
+        create = """DELETE FROM Entries WHERE entry_id='{}'""".format(entry_id)
+        self.cur.execute(create)
+        return True    
+
     # import pdb;pdb.set_trace()
